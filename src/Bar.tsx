@@ -1,5 +1,6 @@
 import { App, Astal, Gtk, Gdk } from "astal/gtk4"
 import { Variable } from "astal"
+import Buttons from "./widgets/Buttons"
 
 const time = Variable("").poll(1000, "date")
 
@@ -14,14 +15,8 @@ export default function Bar(gdkmonitor: Gdk.Monitor) {
         anchor={TOP | LEFT | RIGHT}
         application={App}>
         <centerbox cssName="centerbox">
-            <button
-                onClicked="echo hello"
-                hexpand
-                halign={Gtk.Align.CENTER}
-            >
-                Welcome to AGS!
-            </button>
-            <box />
+            <Buttons />
+            <label>center</label>
             <menubutton
                 hexpand
                 halign={Gtk.Align.CENTER}
