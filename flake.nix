@@ -41,7 +41,7 @@
         inherit pkgs;
         src = ./.;
         name = "bar";
-        entry = "app.ts";
+        entry = "src/app.ts";
         gtk4 = true;
 
         extraPackages = ags-deps ++ deps;
@@ -56,7 +56,7 @@
           })
 
           (pkgs.writeShellScriptBin "gen-types" "ags types -d . --package")
-          (pkgs.writeShellScriptBin "run-dev" "ags run -d . --gtk4")
+          (pkgs.writeShellScriptBin "run-dev" "ags run -d ./src --gtk4")
         ] ++ deps ++ dev-deps ++ ags-deps;
       };
     };
