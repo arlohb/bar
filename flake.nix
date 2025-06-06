@@ -29,7 +29,9 @@
       overlays = [ typescript-overlay ];
     };
 
-    ags-deps = with ags.packages."${system}"; [];
+    ags-deps = with ags.packages."${system}"; [
+      hyprland
+    ];
     deps = with pkgs; [];
     dev-deps = with pkgs; [
       nodePackages.typescript-language-server

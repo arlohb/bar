@@ -14,11 +14,30 @@ window.Bar {
     }
 }
 
-.Buttons button {
+button {
     margin: 2px;
+    border-radius: 8px;
+}
+
+.Buttons button {
     padding-left: 8px;
     padding-right: 10px;
     font-size: 1.5em;
-    border-radius: 8px;
+}
+
+.Workspaces button {
+    font-size: 1.5em;
+    padding-left: 7px;
+    padding-right: 11px;
+}
+
+.Workspaces .active {
+    background-image: unset;
+    background-color: $fg-color;
+    color: $bg-color;
+}
+
+.Workspaces .focus {
+    color: #bb66ff;
 }
 
