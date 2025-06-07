@@ -1,9 +1,7 @@
-import { App, Astal, Gtk, Gdk } from "astal/gtk4"
-import { Variable } from "astal"
+import { App, Astal, Gdk } from "astal/gtk4"
+import Bluetooth from "./widgets/Bluetooth"
 import Buttons from "./widgets/Buttons"
 import Workspaces from "./widgets/Workspaces"
-
-const time = Variable("").poll(1000, "date")
 
 export default function Bar(gdkmonitor: Gdk.Monitor) {
     const { TOP, LEFT, RIGHT } = Astal.WindowAnchor
@@ -18,15 +16,7 @@ export default function Bar(gdkmonitor: Gdk.Monitor) {
         <centerbox cssName="centerbox">
             <Buttons />
             <Workspaces monitorName={gdkmonitor.get_connector() ?? ""} />
-            <menubutton
-                hexpand
-                halign={Gtk.Align.CENTER}
-            >
-                <label label={time()} />
-                <popover>
-                    <Gtk.Calendar />
-                </popover>
-            </menubutton>
+            <Bluetooth />
         </centerbox>
     </window>
 }
