@@ -30,6 +30,7 @@
     };
 
     ags-deps = with ags.packages."${system}"; [
+      battery
       bluetooth
       hyprland
       network

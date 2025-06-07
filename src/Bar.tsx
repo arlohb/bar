@@ -1,4 +1,5 @@
 import { App, Astal, Gdk } from "astal/gtk4"
+import Battery from "./widgets/Battery"
 import Bluetooth from "./widgets/Bluetooth"
 import Buttons from "./widgets/Buttons"
 import Network from "./widgets/Network"
@@ -20,6 +21,7 @@ export default function Bar(gdkmonitor: Gdk.Monitor) {
             <box>
                 <Bluetooth />
                 <Network />
+                <Battery />
             </box>
         </centerbox>
     </window>
