@@ -63,7 +63,7 @@ const Workspace = ({ workspace, active, focusedClient }: {
                 .sort((a, b) => a.x - b.x)
                 .map(client => <label
                     cssClasses={client.address == focusedClient
-                        ? ["focus"] : []
+                        ? ["focus"] : ["unfocus"]
                     }
                 >
                     {clientIcon(client)}
@@ -99,7 +99,7 @@ export default ({ monitorName }: { monitorName: string }) => {
                 .map(workspace => <Workspace
                     workspace={workspace}
                     active={workspace.id === activeWorkspaceId}
-                    focusedClient={focusedClient.address}
+                    focusedClient={focusedClient?.address}
                 />)
         ))}
     </box>
