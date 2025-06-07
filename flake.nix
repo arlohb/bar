@@ -32,6 +32,7 @@
     ags-deps = with ags.packages."${system}"; [
       bluetooth
       hyprland
+      network
     ];
     deps = with pkgs; [];
     dev-deps = with pkgs; [

@@ -1,6 +1,7 @@
 import { App, Astal, Gdk } from "astal/gtk4"
 import Bluetooth from "./widgets/Bluetooth"
 import Buttons from "./widgets/Buttons"
+import Network from "./widgets/Network"
 import Workspaces from "./widgets/Workspaces"
 
 export default function Bar(gdkmonitor: Gdk.Monitor) {
@@ -16,7 +17,10 @@ export default function Bar(gdkmonitor: Gdk.Monitor) {
         <centerbox cssName="centerbox">
             <Buttons />
             <Workspaces monitorName={gdkmonitor.get_connector() ?? ""} />
-            <Bluetooth />
+            <box>
+                <Bluetooth />
+                <Network />
+            </box>
         </centerbox>
     </window>
 }
