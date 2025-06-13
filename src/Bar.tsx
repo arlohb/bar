@@ -4,6 +4,7 @@ import Bluetooth from "./widgets/Bluetooth"
 import Buttons from "./widgets/Buttons"
 import Clock from "./widgets/Clock"
 import Network from "./widgets/Network"
+import Nextcloud from "./widgets/Nextcloud"
 import Workspaces from "./widgets/Workspaces"
 
 export default function Bar(gdkmonitor: Gdk.Monitor) {
@@ -22,6 +23,7 @@ export default function Bar(gdkmonitor: Gdk.Monitor) {
             <box cssClasses={["RightBtns"]}>
                 <Bluetooth />
                 <Network />
+                <Nextcloud />
                 <Battery />
                 <Clock />
             </box>
