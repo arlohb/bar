@@ -9,7 +9,7 @@ $theme-red: #f38ba8;
 $theme-maroon: #eba0ac;
 $theme-peach: #fab387;
 $theme-yellow: #f9e2af;
-$theme-green: #a6a3a1;
+$theme-green: #a6e3a1;
 $theme-teal: #94e2d5;
 $theme-sky: #89dceb;
 $theme-sapphire: #74c7ec;
@@ -73,5 +73,16 @@ button {
 
 .Workspaces .focus {
     color: $theme-rosewater;
+}
+
+.RightBtns {
+    button label { color: $theme-red; }
+
+    button:nth-child(1) label { color: $theme-sky; }
+    button:nth-child(2) label { color: $theme-teal; }
+    button:nth-child(3) label { color: $theme-green; }
+    button:nth-child(4) label { color: $theme-yellow; }
+    button:nth-child(5) label { color: $theme-peach; }
+    button:nth-child(6) label { color: $theme-maroon; }
 }
 

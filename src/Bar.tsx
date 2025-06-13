@@ -19,7 +19,7 @@ export default function Bar(gdkmonitor: Gdk.Monitor) {
         <centerbox cssName="centerbox">
             <Buttons />
             <Workspaces monitorName={gdkmonitor.get_connector() ?? ""} />
-            <box>
+            <box cssClasses={["RightBtns"]}>
                 <Bluetooth />
                 <Network />
                 <Battery />
