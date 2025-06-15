@@ -7,10 +7,10 @@ export default () => {
     const state = Variable("").poll(
         500,
         () => {
-            if (network.wired.state === Network.DeviceState.ACTIVATED) {
+            if (network.wired?.state === Network.DeviceState.ACTIVATED) {
                 return "󰈀   Wired"
             }
-            else if (network.wifi.state === Network.DeviceState.ACTIVATED) {
+            else if (network.wifi?.state === Network.DeviceState.ACTIVATED) {
                 return `󰖩   ${network.wifi.ssid}`
             } else {
                 return "󰌙"
