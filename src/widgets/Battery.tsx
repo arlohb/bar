@@ -17,6 +17,7 @@ const batteryIcon = (percent: number, charging: boolean): string => {
 
 export default () => {
     const battery = Battery.get_default();
+    if (!battery.isPresent) return <></>;
 
     return <button>
         <label>
