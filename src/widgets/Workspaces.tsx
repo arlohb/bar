@@ -15,7 +15,7 @@ type Rule = {
 
 const rules: Rule[] = [
     { key: RuleKey.Title, pattern: "nvim", icon: "" },
-    { key: RuleKey.Class, pattern: "kitty", icon: "󰄛" },
+    { key: RuleKey.Class, pattern: "kitty", icon: "󰆍" },
     { key: RuleKey.Title, pattern: "YouTube", icon: "󰗃" },
     { key: RuleKey.Class, pattern: "firefox", icon: "" },
     { key: RuleKey.Class, pattern: "blender", icon: "󰂫" },
@@ -26,6 +26,10 @@ const rules: Rule[] = [
     { key: RuleKey.Class, pattern: "PrismLauncher", icon: "󰍳" },
     { key: RuleKey.Class, pattern: "Aseprite", icon: "" },
     { key: RuleKey.Class, pattern: "Cura", icon: "󰐫" },
+    { key: RuleKey.Class, pattern: "FreeCAD", icon: "󰻬" },
+    { key: RuleKey.Class, pattern: "OrcaSlicer", icon: "󰐫" },
+    { key: RuleKey.Class, pattern: "Code", icon: "󰨞" },
+    { key: RuleKey.Class, pattern: "jetbrains", icon: "" },
 ];
 
 const matchRule = (client: Hyprland.Client, rule: Rule): boolean => {
